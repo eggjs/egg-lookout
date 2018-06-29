@@ -3,10 +3,22 @@
   "version": "1.0.0",
   "description": "SOFALookout plugin for egg",
   "main": "index.js",
+  "files": [
+    "app",
+    "lib",
+    "config",
+    "app.js"
+  ],
+  "eggPlugin": {
+    "name": "lookout",
+    "optionalDependencies": [
+      "sofaRpc"
+    ]
+  },
   "scripts": {
     "autod": "autod",
     "lint": "eslint . --ext .js",
-    "cov": "TEST_TIMEOUT=10000 egg-bin cov",
+    "cov": "sh test/init.sh && egg-bin cov",
     "test": "npm run lint && npm run test-local",
     "test-local": "egg-bin test",
     "pkgfiles": "egg-bin pkgfiles --check",
@@ -29,21 +41,23 @@
   },
   "homepage": "https://github.com/eggjs/egg-lookout#readme",
   "dependencies": {
-
+    "sofa-lookout-node": "^1.0.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
     "contributors": "^0.5.1",
+    "egg": "^2.9.1",
     "egg-bin": "^4.7.0",
-    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.17.2",
+    "egg-rpc-generator": "^1.0.0",
+    "egg-sofa-rpc": "^1.0.0",
     "eslint": "^5.0.1",
-    "eslint-config-egg": "^7.0.0"
+    "eslint-config-egg": "^7.0.0",
+    "mz": "^2.7.0",
+    "mz-modules": "^2.1.0"
   },
   "engines": {
     "node": ">= 8.0.0"
-  },
-  "ci": {
-    "version": "8, 10"
   }
 }

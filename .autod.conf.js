@@ -11,8 +11,9 @@ module.exports = {
   devdep: [
     'autod',
     'autod-egg',
+    'egg',
     'egg-bin',
-    'egg-ci',
+    'egg-rpc-generator',
     'eslint',
     'eslint-config-egg',
     'contributors',

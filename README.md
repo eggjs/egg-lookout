@@ -45,11 +45,9 @@ exports.lookout = {
 ### Configuration
 
 ```js
-'use strict';
-
 exports.lookout = {
-	agentHost: 'lookout server host',
-	agentPort: 7200,
+  agentHost: 'lookout server host',
+  agentPort: 7200,
   maxMetricNum: 3000,
   reportBatchSize: 1700,
   compressThreshold: 100,

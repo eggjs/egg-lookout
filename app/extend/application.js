@@ -1,7 +1,6 @@
 'use strict';
 
 const LookoutRegistry = require('sofa-lookout-node').LookoutRegistry;
-// Symbols
 const _lookout = Symbol.for('Application#lookout');
 
 module.exports = {
@@ -14,7 +13,7 @@ module.exports = {
       }, this.config.lookout);
       this[_lookout] = new LookoutRegistry(options);
 
-      this.beforeClose(async () => { this[_lookout].close(); });
+      this.beforeClose(() => { this[_lookout].close(); });
     }
     return this[_lookout];
   },

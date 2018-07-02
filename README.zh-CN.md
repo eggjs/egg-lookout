@@ -1,5 +1,4 @@
 # egg-lookout
-SOFALookout plugin for egg framework
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -21,19 +20,19 @@ SOFALookout plugin for egg framework
 [download-image]: https://img.shields.io/npm/dm/egg-lookout.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-lookout
 
-[SOFALookout](https://github.com/alipay/sofa-lookout) plugin for egg framework
+为 egg 提供 [SOFALookout](https://github.com/alipay/sofa-lookout) 客户端功能
 
-## Install
+## 安装
 
 ```bash
 $ npm i egg-lookout --save
 ```
 
-## Usage
+## 用法
 
-### Enable the plugin
+### 开启插件
 
-Change `${app_root}/config/plugin.js` to enable SOFALookout plugin:
+通过 `${app_root}/config/plugin.js` 配置启动 SOFALookout 插件:
 
 ```js
 exports.lookout = {
@@ -42,7 +41,7 @@ exports.lookout = {
 };
 ```
 
-### Configuration
+### 配置
 
 ```js
 'use strict';
@@ -57,16 +56,16 @@ exports.lookout = {
 };
 ```
 
-- `agentHost`: the report service host
-- `agentPort`: the report service port
-- `maxMetricNum`: the maxinum number of metrics that can be created, default value is 3000
-- `reportBatchSize`: the number of items reported to server at one time, default value is 1700
-- `compressThreshold`: sets the minimum block size for which compression is to occur
-- `autoPoll`: whether report to server automatically
+- `agentHost`: lookout 服务器地址
+- `agentPort`: lookout 服务器端口
+- `maxMetricNum`: 最大可以创建的 metric 数量，默认为 3000
+- `reportBatchSize`: 上报服务器的时，会把多个 metric 做合并，这个配置指定了最大合并大小
+- `compressThreshold`: 超过这个数目的 metric 会进行压缩
+- `autoPoll`: 是否开启自动上报
 
-## Example
+## 示例
 
-You can access to lookout APIs by using app.lookout. More detail please refer to [sofa-lookout-node](https://github.com/alipay/sofa-lookout-node)
+你可以通过 app.lookout 实例来访问 lookout 的 APIs，更多内容可以参考 [sofa-lookout-node](https://github.com/alipay/sofa-lookout-node) 文档
 
 ```js
 const id = app.lookout.createId('http_request_count');
@@ -74,7 +73,7 @@ const counter = app.lookout.counter(id);
 counter.inc();
 ```
 
-## How to Contribute
+## 如何贡献
 
 Please let us know how can we help. Do check out [issues](https://github.com/eggjs/egg/issues) for bug reports or suggestions first.
 
@@ -83,4 +82,3 @@ To become a contributor, please follow our [contributing guide](https://github.c
 ## License
 
 [MIT](LICENSE)
-

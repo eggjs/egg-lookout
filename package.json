@@ -48,7 +48,7 @@
     "autod-egg": "^1.1.0",
     "contributors": "^0.5.1",
     "egg": "^2.9.1",
-    "egg-bin": "^4.7.0",
+    "egg-bin": "^4.7.1",
     "egg-mock": "^3.17.2",
     "egg-rpc-generator": "^1.0.0",
     "egg-sofa-rpc": "^1.0.0",

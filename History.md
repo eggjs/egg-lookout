@@ -1,4 +1,10 @@
 
+1.1.0 / 2018-12-24
+==================
+
+**features**
+  * [[`78eeeb0`](http://github.com/eggjs/egg-lookout/commit/78eeeb0dda4b9e179bd125d2e37aeb237d8ef208)] - feat: add agent extension (#5) (Khaidi Chu <<i@2333.moe>>)
+
 1.0.0 / 2018-07-02
 ==================
 

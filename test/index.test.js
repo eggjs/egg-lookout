@@ -51,4 +51,8 @@ describe('test/index.test.js', () => {
     assert(content.includes('"fail_count.count":1,"fail_count.rate":1'));
     assert(content.includes('"request_size.rate":1,"request_size.totalAmount":288,"request_size.max":288,"response_size.rate":1,"response_size.totalAmount":113,"response_size.max":113,'));
   });
+
+  it('should have agent extension', () => {
+    assert(require('../app/extend/agent') === require('../app/extend/application'));
+  });
 });

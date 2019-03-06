@@ -1,4 +1,10 @@
 
+2.0.0 / 2019-03-06
+==================
+
+**others**
+  * [[`98c5a89`](http://github.com/eggjs/egg-lookout/commit/98c5a8944ee78a2f98edd93d0686e9b7576445ba)] - refactor: upgrade egg-sofa-rpc to 2.0.0 (#6) (zhoukk <<izhoukk@gmail.com>>)
+
 1.1.0 / 2018-12-24
 ==================
 
